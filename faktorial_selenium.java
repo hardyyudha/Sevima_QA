@@ -43,7 +43,7 @@ public class HardyTestTest {
     driver.findElement(By.cssSelector(".g-3")).click();
     driver.findElement(By.id("input")).click();
     driver.findElement(By.id("input")).click();
-    driver.findElement(By.id("input")).sendKeys("hallo@sad");
+    driver.findElement(By.id("input")).sendKeys("hallo@sad"); //change this line to update value of field in order to do factorial function
     driver.findElement(By.id("hitung")).click();
     driver.findElement(By.id("input")).click();
   }
