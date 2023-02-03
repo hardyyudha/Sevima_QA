@@ -22,7 +22,7 @@ import org.openqa.selenium.Keys;
 import java.util.*;
 import java.net.MalformedURLException;
 import java.net.URL;
-public class HardyTestTest {
+public class QATaskTest {
   private WebDriver driver;
   private Map<String, Object> vars;
   JavascriptExecutor js;
@@ -37,14 +37,62 @@ public class HardyTestTest {
     driver.quit();
   }
   @Test
-  public void hardyTest() {
+  public void qATask() {
     driver.get("https://qa.putraprima.id/");
-    driver.manage().window().setSize(new Dimension(577, 1004));
-    driver.findElement(By.cssSelector(".g-3")).click();
+    driver.manage().window().setSize(new Dimension(1920, 1050));
+    driver.findElement(By.linkText("Terms Of Service")).click();
+    driver.findElement(By.linkText("Privacy Policy")).click();
     driver.findElement(By.id("input")).click();
-    driver.findElement(By.id("input")).click();
-    driver.findElement(By.id("input")).sendKeys("hallo@sad"); //change this line to update value of field in order to do factorial function
+    driver.findElement(By.id("input")).sendKeys("0");
+    driver.findElement(By.id("hitung")).click();
+    driver.findElement(By.cssSelector(".d-flex")).click();
+    driver.findElement(By.id("input")).sendKeys("170");
+    driver.findElement(By.id("hitung")).click();
+    driver.findElement(By.cssSelector(".d-flex")).click();
+    driver.findElement(By.id("input")).sendKeys("-1");
+    driver.findElement(By.id("hitung")).click();
+    driver.findElement(By.cssSelector(".d-flex")).click();
+    driver.findElement(By.id("input")).sendKeys("171");
     driver.findElement(By.id("hitung")).click();
     driver.findElement(By.id("input")).click();
+    driver.findElement(By.cssSelector(".d-flex")).click();
+    driver.findElement(By.id("input")).sendKeys("hallo");
+    driver.findElement(By.id("hitung")).click();
+    driver.findElement(By.cssSelector(".d-flex")).click();
+    driver.findElement(By.id("input")).sendKeys("1.2");
+    driver.findElement(By.id("hitung")).click();
+    driver.findElement(By.id("input")).click();
+    driver.findElement(By.id("input")).sendKeys("1,2");
+    driver.findElement(By.id("hitung")).click();
+    driver.findElement(By.cssSelector(".d-flex")).click();
+    driver.findElement(By.id("input")).sendKeys("-10");
+    driver.findElement(By.id("hitung")).click();
+    driver.findElement(By.cssSelector(".d-flex")).click();
+    driver.findElement(By.id("input")).sendKeys("+10");
+    driver.findElement(By.id("hitung")).click();
+    driver.findElement(By.id("input")).click();
+    driver.findElement(By.cssSelector(".d-flex")).click();
+    driver.findElement(By.id("input")).sendKeys("$");
+    driver.findElement(By.id("hitung")).click();
+    driver.findElement(By.cssSelector(".d-flex")).click();
+    driver.findElement(By.id("input")).sendKeys(" ");
+    driver.findElement(By.id("hitung")).click();
+    {
+      WebElement element = driver.findElement(By.cssSelector(".d-flex"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).clickAndHold().perform();
+    }
+    {
+      WebElement element = driver.findElement(By.cssSelector(".d-flex"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    {
+      WebElement element = driver.findElement(By.cssSelector(".d-flex"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).release().perform();
+    }
+    driver.findElement(By.cssSelector(".d-flex")).click();
   }
 }
+
